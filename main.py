@@ -14,7 +14,7 @@ async def create_poll(dp: Dispatcher):
 
 
 def schedule_jobs():
-    scheduler.add_job(create_poll, "cron", day_of_week='mon-fri', hour=14, minute=30, args=(dp,))
+    scheduler.add_job(create_poll, "cron", day_of_week='mon-fri', hour=10, minute=05, args=(dp,))
 
 async def on_startup(dp):
     schedule_jobs()
